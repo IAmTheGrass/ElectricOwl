@@ -1,0 +1,15 @@
+<p>Index Objects</p>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eoobjects.each do |obj| %>
+		<tr>
+    	<td><%= obj.name %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

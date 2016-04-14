@@ -1,0 +1,8 @@
+<p>New Page Collection</P>
+<%= form_for @eopagcol,remote: true do |f| %>
+<%= f.label :eoapp_id %>
+<%= f.collection_select :eoapp_id, Eoapp.all, :id, :name %>
+<%= f.label :eopage_id %>
+<%= f.collection_select :eopage_id, Eopage.all, :id, :name %>
+<%= f.submit  %>
+<% end %>

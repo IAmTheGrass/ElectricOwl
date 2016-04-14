@@ -1,0 +1,15 @@
+<p>Index Models</p>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eomodels.each do |mod| %>
+		<tr>
+    	<td><%= mod.name %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

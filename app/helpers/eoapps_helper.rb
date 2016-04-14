@@ -1,0 +1,2 @@
+module EoappsHelper
+end

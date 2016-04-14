@@ -1,0 +1,15 @@
+<p>Index Partials</P>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eopartials.each do |par| %>
+		<tr>
+    	<td><%= par.name %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

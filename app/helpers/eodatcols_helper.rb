@@ -1,0 +1,2 @@
+module EodatcolsHelper
+end

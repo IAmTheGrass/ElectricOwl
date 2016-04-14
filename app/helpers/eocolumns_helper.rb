@@ -1,0 +1,2 @@
+module EocolumnsHelper
+end

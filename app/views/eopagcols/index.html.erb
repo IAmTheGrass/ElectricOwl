@@ -1,0 +1,17 @@
+<p>Index Page Collection</P>
+<table >
+	<thead>
+		<tr>
+        <th>App</th>
+         <th>Page</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eopagcol.each do |pc| %>
+		<tr>
+    	<td><%= pc.eoapp_id %></td>
+    	<td><%= pc.eopage_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

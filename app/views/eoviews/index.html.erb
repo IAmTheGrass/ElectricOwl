@@ -1,0 +1,17 @@
+<p>Index Views</p>
+<table >
+  <thead>
+    <tr>
+      <th># of divs</th>
+      <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @eoviews.each do |viw| %>
+        <tr>
+        <td><%= viw.divnum %></td>
+        <td><%= viw.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>

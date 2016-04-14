@@ -1,0 +1,2 @@
+module EoobjectsHelper
+end

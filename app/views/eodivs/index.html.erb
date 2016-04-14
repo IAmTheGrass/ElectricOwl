@@ -1,0 +1,17 @@
+<p>Index Divs</P>
+<table >
+	<thead>
+		<tr>
+        <th>Partial</th>
+        <th>View</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eodivs.each do |div| %>
+		<tr>
+    	<td><%= div.eopartial_id %></td>
+    	<td><%= div.eoview_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

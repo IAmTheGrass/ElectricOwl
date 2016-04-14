@@ -1,0 +1,17 @@
+<p>Index Pages</p>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+         <th>View</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eopages.each do |pag| %>
+		<tr>
+    	<td><%= pag.name %></td>
+    	<td><%= pag.eoview_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

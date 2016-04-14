@@ -1,0 +1,7 @@
+<%= form_for @eoobjcol,remote: true do |f| %>
+<%= f.label :eomodel_id %>
+<%= f.collection_select :eomodel_id, Eomodel.all, :id, :name %>
+<%= f.label :eoobject_id %>
+<%= f.collection_select :eoobject_id, Eoobject.all, :id, :name %>
+<%= f.submit  %>
+<% end %>

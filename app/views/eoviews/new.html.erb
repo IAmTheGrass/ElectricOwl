@@ -1,0 +1,8 @@
+<p>New View</P>
+<%= form_for @eoview,remote: true do |f| %>
+<%= f.label :divnum %>
+<%= f.text_field :divnum %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit  %>
+<% end %>

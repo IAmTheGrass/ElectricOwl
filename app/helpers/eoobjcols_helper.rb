@@ -1,0 +1,2 @@
+module EoobjcolsHelper
+end

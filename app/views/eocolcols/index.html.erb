@@ -1,0 +1,17 @@
+<p>Index Columns Collection</p>
+<table >
+	<thead>
+		<tr>
+        <th>Object</th>
+        <th>Column</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eocolcols.each do |cc| %>
+		<tr>
+    	<td><%= cc.eoobject_id %></td>
+    	<td><%= cc.eocolumn_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

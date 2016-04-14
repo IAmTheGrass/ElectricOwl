@@ -1,0 +1,15 @@
+<p>Index data</p>
+<table >
+	<thead>
+		<tr>
+        <th>Input</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eostoredats.each do |dat| %>
+		<tr>
+    	<td><%= dat.eoinput %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

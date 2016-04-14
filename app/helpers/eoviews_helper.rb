@@ -1,0 +1,2 @@
+module EoviewsHelper
+end

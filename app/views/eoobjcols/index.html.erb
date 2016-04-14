@@ -1,0 +1,17 @@
+<p>Index Object Collection</p>
+<table >
+	<thead>
+		<tr>
+        <th>Model</th>
+         <th>Object</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eoobjcols.each do |oj| %>
+		<tr>
+    	<td><%= oj.eomodel_id %></td>
+    	<td><%= oj.eoobject_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

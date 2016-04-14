@@ -1,0 +1,28 @@
+<p>Test View</P>
+<p>App Name: <%= @useme.name %></P>
+<p>Page Name: <%= @useme.eopagcols.find(1).eopage.name %></P>
+<p>Model Name: <%= @useme.eomodel.name %></P>
+<p>TEST: <%= @useme.eomodel.eoobjcols.count %></P>
+
+<% @useme.eomodel.eoobjcols.each do |oc|%>
+<p>Object name: <%= oc.eoobject.name %></P>
+<p>Column name: <%= oc.eoobject.eocolcols.find(1).eocolumn.name %></P>
+<% oc.eoobject.eocolcols.each do |cc|%>
+<% cc.eocolumn.eodatcols.each do |dat| %>
+<%= dat.eostoredat.eoinput %>
+<% end %>
+<% end %>
+<% end %>
+
+<p>BREAK</p>
+
+<% @useme.eopagcols.each do |pc|%>
+<p>view ID: <%= pc.eopage.name %></P>
+<p>view ID: <%= pc.eopage.eoview.name %></P>
+<% pc.eopage.eoview.eodivs.each do |div|%>
+<div class = "gdiv"><%= render "generics/" + div.eopartial.name %></div>
+<p>view ID: <%= div.eopartial.name %></P>
+<% end %>
+<% end %>
+
+<div class = "gdiv"><%= render "generics/new" %></div>

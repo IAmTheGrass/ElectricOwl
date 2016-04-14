@@ -1,0 +1,17 @@
+<p>Index Columns</p>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+        <th>Type</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eocolumns.each do |col| %>
+		<tr>
+    	<td><%= col.name %></td>
+    	<td><%= col.coltype %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

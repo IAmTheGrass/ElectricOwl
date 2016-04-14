@@ -1,0 +1,8 @@
+<p>New Div</P>
+<%= form_for @eodiv,remote: true do |f| %>
+<%= f.label :eopartial_id %>
+<%= f.collection_select :eopartial_id, Eopartial.all, :id, :name %>
+<%= f.label :eoview_id %>
+<%= f.collection_select :eoview_id, Eoview.all, :id, :name %>
+<%= f.submit  %>
+<% end %>

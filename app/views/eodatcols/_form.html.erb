@@ -1,0 +1,7 @@
+<%= form_for @eodatcol,remote: true do |f| %>
+<%= f.label :eocolumn_id %>
+<%= f.collection_select :eocolumn_id, Eocolumn.all, :id, :name %>
+<%= f.label :eostoredat_id %>
+<%= f.collection_select :eostoredat_id, Eostoredat.all, :id, :eoinput %>
+<%= f.submit  %>
+<% end %>

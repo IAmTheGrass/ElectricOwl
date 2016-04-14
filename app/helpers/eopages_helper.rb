@@ -1,0 +1,2 @@
+module EopagesHelper
+end

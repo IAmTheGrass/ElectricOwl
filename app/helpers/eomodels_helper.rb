@@ -1,0 +1,2 @@
+module EomodelsHelper
+end

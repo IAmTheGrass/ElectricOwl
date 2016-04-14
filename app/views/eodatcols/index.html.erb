@@ -1,0 +1,17 @@
+<p>Index Data Collection</p>
+<table >
+	<thead>
+		<tr>
+        <th>Column</th>
+        <th>Data</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eodatcol.each do |dc| %>
+		<tr>
+    	<td><%= dc.eocolumn_id %></td>
+    	<td><%= dc.eostoredat_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>
