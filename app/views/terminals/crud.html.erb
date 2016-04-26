@@ -1,0 +1,39 @@
+<p>Use App</p>
+
+<% @eoapp.eomodel.eoobjcols.each do |obj| %>
+<div id = "<%= obj.eoobject.id%>" class = "left drag">
+	<p><%= obj.eoobject.name %></P>
+</div>
+<% end %>
+
+
+<div id = "fnew" class = "show right drag">
+	<p>New</P>
+</div>
+<div id = "findex" class = "show right drag">
+	<p> Read </P>
+</div>
+<div id = "Update" class = "right drag">
+	<p> Update </P>
+</div>
+<div id = "drop" class = "right drag">
+	<p> Destroy </P>
+</div>
+<div id = "calculate" class = "right drag">
+	<p> Calculate </P>
+</div>
+<div id = "ObjectLand" class = "drag">
+	<p>Object</P>
+</div>
+<div id = "ActionLand" class = "drag" tracker = "#">
+	<p> Action </P>
+</div>
+<br><br>
+<div id = "Display" class = "middle">
+	<p> Display </P>
+</div>
+<br><br>
+<div id = "TestLog" class = "middle">
+	<p> Testing Console </P>
+	<br>
+</div>

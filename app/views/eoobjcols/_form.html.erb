@@ -1,4 +1,6 @@
 <%= form_for @eoobjcol,remote: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
 <%= f.label :eomodel_id %>
 <%= f.collection_select :eomodel_id, Eomodel.all, :id, :name %>
 <%= f.label :eoobject_id %>

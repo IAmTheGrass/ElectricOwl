@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414032535) do
+ActiveRecord::Schema.define(version: 20160419070554) do
 
   create_table "eoapps", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.integer  "eocolumn_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "name"
   end
 
   create_table "eocolumns", force: :cascade do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.integer  "eostoredat_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "name"
   end
 
   create_table "eodivs", force: :cascade do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.integer  "eoview_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "name"
   end
 
   create_table "eomodels", force: :cascade do |t|
@@ -60,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.integer  "eoobject_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "name"
   end
 
   create_table "eoobjects", force: :cascade do |t|
@@ -73,6 +77,7 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.integer  "eopage_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "eopages", force: :cascade do |t|
@@ -88,10 +93,33 @@ ActiveRecord::Schema.define(version: 20160414032535) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "eorowcols", force: :cascade do |t|
+    t.integer  "eoobject_id"
+    t.integer  "eorow_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+  end
+
+  create_table "eorowdatcols", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "eostoredat_id"
+    t.integer  "eorow_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "eorows", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "eostoredats", force: :cascade do |t|
     t.string   "eoinput"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "eoviews", force: :cascade do |t|

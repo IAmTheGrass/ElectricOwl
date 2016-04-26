@@ -1,0 +1,10 @@
+<div id="head">
+<p>Land</p>
+<select id="pickapp" tracker="test">
+<% @eoapps.each do |app| %>
+<option value="<%= app.id %>"><%= app.name %></option>
+<% end %>
+</select>
+</div>
+
+<div id="appdisplay"></div>

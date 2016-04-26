@@ -1,0 +1,51 @@
+<p>Fake New</p>
+<p>App Name: <%= @eoapp.name %></P>
+<p>Object Name: <%= @eoobject.name %></P>
+<p>Loop Count: <%= @loopcount %></P>
+<% @nextdataid = @eostoredats.last.id %>
+<% @nextrowid = @eorows.last.id %>
+
+<p>Object</p>
+<%= form_for @eoobject,remote: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<% @eoobject.eocolcols.each do |track|%>
+<p><%= track.eocolumn.name %></p>
+<p>Row Collection</p>
+<%= fields_for @eorowcol do |rc| %>
+<%= rc.label :name %>
+<%= rc.text_field :name %>
+<%= rc.hidden_field :eoobject_id, value: @eoobject.id %>
+<%= rc.hidden_field :eorow_id, value: @nextrowid %>
+<% end %>
+<p>Row</p>
+<%= form_for @eorow,remote: true do |r| %>
+<%= r.label :name %>
+<%= r.text_field :name %>
+<% end %>
+<p>Row Data Collection</p>
+<%= form_for @eorowdatcol,remote: true do |rdc| %>
+<%= rdc.label :name %>
+<%= rdc.text_field :name %>
+<%= rdc.hidden_field :eostoredat_id, value: @nextdataid %>
+<%= rdc.hidden_field :eorow_id, value: @nextrowid %>
+<% end %>
+<p>Data</p>
+<%= form_for @eostoredat,remote: true do |dat| %>
+<%= dat.label :name %>
+<%= dat.text_field :name %>
+<%= dat.label :eoinput %>
+<%= dat.text_field :eoinput %>
+<% end %>
+<p>Data Collection</p>
+<%= form_for @eodatcol,remote: true do |dc| %>
+<%= dc.label :name %>
+<%= dc.text_field :name %>
+<%= dc.hidden_field :eocolumn_id, value: track.eocolumn.id %>
+<%= dc.hidden_field :eostoredat_id, value: @nextdataid %>
+<% end %>
+<% end %>
+
+<%= f.submit  %>
+<% end %>

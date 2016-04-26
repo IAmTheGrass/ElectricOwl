@@ -38,7 +38,24 @@ Rails.application.routes.draw do
   resources :eostoredats do
     get "delete"
   end
+  resources :eorowcols do
+    get "delete"
+  end
+  resources :eorowdatcols do
+    get "delete"
+  end
+  resources :eorows do
+    get "delete"
+  end
   resources :generics
-  resources :terminals
-  root 'terminals#testview'
+  resources :terminals do
+    get "delete"
+    get "useapp"
+    get "crud"
+  end
+  post 'telc' => "terminals#crud"
+  post 'findex' => "generics#findex"
+  post 'fnew' => "generics#fnew"
+
+  root 'terminalapps#buildapp'
 end

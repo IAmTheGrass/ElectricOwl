@@ -13,6 +13,6 @@ class EoobjcolsController < ApplicationController
 	
 	private
 	def eoobjcol_params
-		params.require(:eoobjcol).permit(:eomodel_id, :eoobject_id)
+		params.require(:eoobjcol).permit(:eomodel_id, :eoobject_id, :name)
 	end
 end

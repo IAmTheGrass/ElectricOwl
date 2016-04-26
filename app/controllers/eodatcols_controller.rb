@@ -24,6 +24,6 @@ class EodatcolsController < ApplicationController
 	
 	private
 	def eodatcol_params
-		params.require(:eodatcol).permit(:eocolumn_id, :eostoredat_id)
+		params.require(:eodatcol).permit(:eocolumn_id, :eostoredat_id, :name)
 	end
 end

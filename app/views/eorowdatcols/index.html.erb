@@ -1,0 +1,17 @@
+<p>Index Row Data Collection</p>
+<table >
+	<thead>
+		<tr>
+        <th>Data</th>
+         <th>Row</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eorowdatcols.each do |rdc| %>
+		<tr>
+    	<td><%= rdc.eostoredat_id %></td>
+    	<td><%= rdc.eorow_id %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>

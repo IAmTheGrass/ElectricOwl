@@ -1,0 +1,23 @@
+<p>Fake index</p>
+<p>App Name: <%= @eoapp.name %></P>
+<p>Object Name: <%= @eoobject.name %></P>
+
+<table >
+	<thead>
+		<tr>
+			<% @eoobject.eocolcols.each do |cc| %>
+				<th><%= cc.eocolumn.name %></th>
+			<% end %>
+		</tr>
+    </thead>
+    <tbody>
+    	<% @eoobject.eorowcols.each do |rc| %>
+    		<tr>
+    			<% rc.eorow.eorowdatcols.each do |rd| %>
+    				<td><%= rd.eostoredat.eoinput %></td>
+    			<% end %>
+  			</tr>
+  		<% end %>
+	</tbody>
+
+</table>

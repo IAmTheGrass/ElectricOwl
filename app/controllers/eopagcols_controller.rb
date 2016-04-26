@@ -13,6 +13,6 @@ class EopagcolsController < ApplicationController
 	
 	private
 	def eopagcol_params
-		params.require(:eopagcol).permit(:eoapp_id, :eopage_id)
+		params.require(:eopagcol).permit(:eoapp_id, :eopage_id, :name)
 	end
 end

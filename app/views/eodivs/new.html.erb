@@ -1,5 +1,7 @@
 <p>New Div</P>
 <%= form_for @eodiv,remote: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
 <%= f.label :eopartial_id %>
 <%= f.collection_select :eopartial_id, Eopartial.all, :id, :name %>
 <%= f.label :eoview_id %>

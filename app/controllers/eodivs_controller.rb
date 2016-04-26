@@ -13,6 +13,6 @@ class EodivsController < ApplicationController
 	
 	private
 	def eodiv_params
-		params.require(:eodiv).permit(:eopartial_id, :eoview_id)
+		params.require(:eodiv).permit(:eopartial_id, :eoview_id, :name)
 	end
 end

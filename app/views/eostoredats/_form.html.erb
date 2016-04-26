@@ -1,4 +1,6 @@
 <%= form_for @eostoredat,remote: true do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
 <%= f.label :eoinput %>
 <%= f.text_field :eoinput %>
 <%= f.submit  %>

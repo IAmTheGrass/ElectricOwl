@@ -1,0 +1,15 @@
+<p>Index Rows</p>
+<table >
+	<thead>
+		<tr>
+        <th>Name</th>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% @eorows.each do |row| %>
+		<tr>
+    	<td><%= row.name %></td>
+  		</tr>
+		<% end %>
+    </tbody>
+</table>
