@@ -58,8 +58,8 @@ Rails.application.routes.draw do
   post 'findex' => "generics#findex"
   post 'fnew' => "generics#fnew"
 
-  get 'buildapp' => "terminals#land"
-  get 'manageapp' => "terminalapps#buildapp"
+  get 'manageapp' => "terminals#land"
+  get 'buildapp' => "terminalapps#buildapp"
   get 'rubyfox' => "terminals#rubyfox"
 
   root 'terminals#mainmenu'
