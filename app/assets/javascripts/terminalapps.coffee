@@ -1,14 +1,14 @@
 $ ->
-    //Makes dives draggable
+    #Makes dives draggable
     $( ".drag" ).draggable()
-    //Handles object drops
+    #Handles object drops
     $("#ObjectLand2").droppable(
         tolerance: 'fit', accept: '.left'
         drop: (e,ui) ->
             $(this).attr("tracker", ui.draggable.attr("id"))
             $( "#Display" ).load( $("#ObjectLand2").attr("tracker") + "/" + $("#ActionLand2").attr("tracker"))
     )
-    //Handles action drops
+    #Handles action drops
 	$("#ActionLand2").droppable(
         tolerance: 'fit', accept: '.right'
         drop: (e,ui) ->
