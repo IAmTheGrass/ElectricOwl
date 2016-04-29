@@ -35,8 +35,10 @@
 <%= form_for @eostoredat,remote: true do |dat| %>
 <%= dat.label :name %>
 <%= dat.text_field :name %>
+<p>REAL INPUT<p>
 <%= dat.label :eoinput %>
 <%= dat.text_field :eoinput %>
+<p>REAL INPUT<p>
 <% end %>
 <p>Data Collection</p>
 <%= form_for @eodatcol,remote: true do |dc| %>

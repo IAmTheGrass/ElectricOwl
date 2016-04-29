@@ -1,0 +1,31 @@
+<p>RubyFox</p>
+<div id="browser">
+	<!-- Evenually used to choose app via FRL-->
+	<p>RubyFox</p>
+	FRL <input type="text" id="frlinput"><br>
+	<div id="browserdisplay">
+		<!-- Loops and makes all dives associated with selected page -->
+		<% @useme.eopagcols.each do |pc|%>
+			<% pc.eopage.eoview.eodivs.each do |div|%>
+				<div class = "gdiv"><%= render "generics/" + div.eopartial.name %></div>
+				<br><br><br><br><br><br>
+			<% end %>
+		<% end %>
+	</div>
+</div>
+<!-- Testing -->
+<p>BREAK</p>
+<p>App Name: <%= @useme.name %></P>
+<p>Page Name: <%= @useme.eopagcols.find(1).eopage.name %></P>
+<p>Model Name: <%= @useme.eomodel.name %></P>
+<p>TEST: <%= @useme.eomodel.eoobjcols.count %></P>
+
+<% @useme.eomodel.eoobjcols.each do |oc|%>
+<p>Object name: <%= oc.eoobject.name %></P>
+
+<% oc.eoobject.eocolcols.each do |cc|%>
+<% cc.eocolumn.eodatcols.each do |dat| %>
+<%= dat.eostoredat.eoinput %>
+<% end %>
+<% end %>
+<% end %>

@@ -1,5 +1,4 @@
-<!-- TESTING -->
-<p>Test View</P>
+<p>Land Generic</p>
 <p>App Name: <%= @useme.name %></P>
 <p>Page Name: <%= @useme.eopagcols.find(1).eopage.name %></P>
 <p>Model Name: <%= @useme.eomodel.name %></P>
@@ -14,16 +13,3 @@
 <% end %>
 <% end %>
 <% end %>
-
-<p>BREAK</p>
-
-<% @useme.eopagcols.each do |pc|%>
-<p>view ID: <%= pc.eopage.name %></P>
-<p>view ID: <%= pc.eopage.eoview.name %></P>
-<% pc.eopage.eoview.eodivs.each do |div|%>
-<div class = "gdiv"><%= render "generics/" + div.eopartial.name %></div>
-<p>view ID: <%= div.eopartial.name %></P>
-<% end %>
-<% end %>
-
-<div class = "gdiv"><%= render "generics/new" %></div>

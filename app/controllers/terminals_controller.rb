@@ -3,6 +3,10 @@ class TerminalsController < ApplicationController
 		@useme = Eoapp.find(1)
 	end
 
+	def rubyfox
+		@useme = Eoapp.find(1)
+	end
+
 	def index
 		@eoapps = Eoapp.all
 	end

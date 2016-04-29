@@ -1,12 +1,11 @@
 <p>Use App</p>
-
+<!-- Loop to make div for each object in App-->
 <% @eoapp.eomodel.eoobjcols.each do |obj| %>
 <div id = "<%= obj.eoobject.id%>" class = "left drag">
 	<p><%= obj.eoobject.name %></P>
 </div>
 <% end %>
-
-
+<!-- Generic Restfull divs -->
 <div id = "fnew" class = "show right drag">
 	<p>New</P>
 </div>

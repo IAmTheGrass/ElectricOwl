@@ -52,10 +52,15 @@ Rails.application.routes.draw do
     get "delete"
     get "useapp"
     get "crud"
+    get "land"
   end
   post 'telc' => "terminals#crud"
   post 'findex' => "generics#findex"
   post 'fnew' => "generics#fnew"
 
-  root 'terminalapps#buildapp'
+  get 'buildapp' => "terminals#land"
+  get 'manageapp' => "terminalapps#buildapp"
+  get 'rubyfox' => "terminals#rubyfox"
+
+  root 'terminals#mainmenu'
 end

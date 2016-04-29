@@ -15,15 +15,13 @@ class EoobjectsController < ApplicationController
 		@eoobject = Eoobject.find(params[:id])
 		@loopcount = @eoobject.eocolcols.count
 		@loopcount.times do |y|
-		@eorowcol = Eorowcol.create(eorowcol_params)
-		@eorow = Eorow.create(eorow_params)
-		@eorowdatcol = Eorowdatcol.create(eorowdatcol_params)
-		@eostoredat = Eostoredat.create(eostoredat_params)
-		@eodatcol = Eodatcol.create(eodatcol_params)
-
-		
-end
-@eoobject.update_attributes(eoobject_params)
+			@eorowcol = Eorowcol.create(eorowcol_params)
+			@eorow = Eorow.create(eorow_params)
+			@eorowdatcol = Eorowdatcol.create(eorowdatcol_params)
+			@eostoredat = Eostoredat.create(eostoredat_params)
+			@eodatcol = Eodatcol.create(eodatcol_params)
+		end
+		@eoobject.update_attributes(eoobject_params)
 	end
 	
 	private
